@@ -1,0 +1,7 @@
+$(document).ready(function() {
+	//our code goes
+	//$('input[required]').addClass('highlighted')
+	//$('input[placeholder=Email]').addClass('highlighted')
+	$('input[placeholder *=Name]').addClass('highlighted')
+	
+});
