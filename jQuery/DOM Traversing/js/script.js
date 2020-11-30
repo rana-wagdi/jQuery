@@ -5,6 +5,6 @@ $(document).ready(function() {
 	console.log(result);
 
 	//DOM traversing (more efficient)
-	result = $('#animals').find('.creature');
+	result=$('#animals').find('.creature');
 	console.log(result);
 });
