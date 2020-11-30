@@ -1,6 +1,10 @@
 $(document).ready(function(){
-	//keydown, keyup
-	$('#example').on('keyup','input',function(){
-		$('#result').html('Your name is: '+$(this).val())
+	$('#example').on('click','a',function(e){
+		e.preventDefault();
+		e.stopPropagation();
+		console.log('hello');
+	});
+	$('#example').on('click',function(e){
+		console.log('hello container');
 	});
 });
