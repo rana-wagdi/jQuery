@@ -1,10 +1,18 @@
 $(document).ready(function() {
-	
-	//CSS selectors
-	var result=$('#animals > .creature');
+	//first(), last()
+	var result =$('#animals').children().first().children('.creature').last();
 	console.log(result);
 
-	//DOM traversing
-	result=$('#animals').children('.creature');
+	//prev()
+	var result =$('#animals').children().first().children('.creature').last().prev().prev();
 	console.log(result);
+
+	//next()
+	var result=$('animals').children().first().children('.creature').first().next();
+	console.log(result);
+
+	//CSS selectors
+
+	//DOM traversing
+
 });
