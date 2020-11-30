@@ -1,16 +1,14 @@
-$(document).ready(function() {
-	$('#add-container').on('click', 'button', function(){
-		var value = $('#add-container input').val();
-		console.log(value);
+$(document).ready(function(){
+        $('#add-container').on('click','button',function(){
+                var value = $('#add-container input').val();
+                console.log(value);
 
-		var html = '<div class="item">\
+                var html =' <div class="item">\
                 <div class="remove">X</div>' + value + '</div>';
-        console.log(html);
+                console.log(html);
 
-        //$('#places-container').append(html);
-        //$(html).appendTo('#places-container');
-
-        $('#places-container').prepend(html);
-        //$(html).prependTo('#places-container');
-	});
+              //  $('#places-container').append(html);
+             // $(html).appendTo('#places-container');
+                $('#places-container').prepend(html);
+        })
 });
