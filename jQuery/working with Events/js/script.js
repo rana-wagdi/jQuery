@@ -1,5 +1,5 @@
-$(document).ready(function() {
-	$('#example').on('click', function(){
+$(document).ready(function(){
+	$('#example').on('click',function(){
 		console.log(this);
 		console.log($(this));
 
