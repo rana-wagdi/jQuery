@@ -1,18 +1,13 @@
 $(document).ready(function() {
-	//first(), last()
-	var result =$('#animals').children().first().children('.creature').last();
+	//parent()
+	var result=$('#cat').parent();
 	console.log(result);
 
-	//prev()
-	var result =$('#animals').children().first().children('.creature').last().prev().prev();
+	//parentS()
+	result=$('#cat').parents('.category');
 	console.log(result);
 
-	//next()
-	var result=$('animals').children().first().children('.creature').first().next();
+	//closets()
+	result=$('#cat').closest('.category');
 	console.log(result);
-
-	//CSS selectors
-
-	//DOM traversing
-
 });
