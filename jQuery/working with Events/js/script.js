@@ -1,9 +1,6 @@
 $(document).ready(function(){
-	$('#example').on('click',function(){
-		console.log(this);
+	$('#example').on('click','.switch',function(){
 		console.log($(this));
-
-		//$(this).addClass('highlighted');
-		$(this).toggleClass('highlighted');
-	});
-});
+		$(this).parent().toggleClass('highlighted');
+	})
+})

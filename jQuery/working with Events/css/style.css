@@ -14,3 +14,13 @@ body {
 	background-color: #3BEAB4;
 }
 
+button {
+	background-color: #F46D63;
+	color: white;
+	font-weight: bold;
+	border:none;
+	padding: 5px;
+	width: 100px;
+	margin: 35px auto;
+}
+
