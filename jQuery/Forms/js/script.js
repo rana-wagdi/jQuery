@@ -7,4 +7,14 @@ $(document).ready(function(){
 		}
 	});
 	$('#hasPets').trigger('change');
+	$('#pet').on('change',function(){
+		var pet=$(this).val();
+		if(pet=='Dog'){
+			$('#pet-feedback').text('Dogs are great !')
+		}else if(pet=='Cat'){
+			$('#pet-feedback').text('Cats are great !')
+		}else{
+			$('#pet-feedback').empty()
+		}
+	})
 })
