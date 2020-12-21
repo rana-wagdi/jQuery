@@ -13,12 +13,16 @@
       <script src="jquery.js" type="text/javascript"></script>
       <script type="text/javascript">
           $(document).ready(function () {
-            $('div[title*="Title"]').html('updated Div value due the title');
+             var output = $('#OutputDiv')
+            $('div.BlueDiv,div.RedDiv').each(function(index){
+               output.html(output.html()+ "<br/>" + index+ " "+$(this).text());
+            });
             
           });
       </script>
   </head>
   <body>
+     <div id="OutputDiv"></div>
       <div id="TestDiv" title="Div Title asdf asdfsdf asdf">
           This is my div text
       </div>
