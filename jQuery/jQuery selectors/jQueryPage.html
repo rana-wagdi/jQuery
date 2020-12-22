@@ -13,11 +13,19 @@
       <script src="jquery.js" type="text/javascript"></script>
       <script type="text/javascript">
           $(document).ready(function () {
-             var output = $('#OutputDiv')
+            var html ='';
             $('div.BlueDiv,div.RedDiv').each(function(index){
-               output.html(output.html()+ "<br/>" + index+ " "+$(this).text());
+               html += "<br />" + index+ " "+$(this).text();
             });
-            
+            var output = $('#OutputDiv');
+            output.html(html);
+
+            //Modifying properties and attributes
+            $('div.BlueDiv,div.RedDiv').each(function(index){
+               //raw DOM object
+               this.title ="Some title";
+               alert(this.title);
+            })
           });
       </script>
   </head>
