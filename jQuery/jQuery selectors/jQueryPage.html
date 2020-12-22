@@ -24,7 +24,7 @@
                
             });
             //Handle select
-            $('#StateSelect').change(function(){
+            $('.MyInput').change(function(){
                alert($(this).val());
             });
           }
@@ -87,15 +87,15 @@
               </tr>
               <tr>
                   <td>Last Name</td>
-                  <td><input id="LastNameTextBox" type="text" /></td>
+                  <td><input class="MyInput" id="LastNameTextBox" type="text" /></td>
               </tr>
               <tr>
                   <td>Comments</td>
-                  <td><textarea rows="5" cols="60" id="CommentsTextBox">TextArea</textarea></td>
+                  <td><textarea class="MyInput" rows="5" cols="60" id="CommentsTextBox">TextArea</textarea></td>
               </tr>           
               <tr>
                   <td>
-                  <select id="StateSelect">
+                  <select id="StateSelect" class="MyInput">
                       <option value="AZ">AZ</option>
                       <option value="CA" selected="true">CA</option>
                   </select></td>
