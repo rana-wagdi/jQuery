@@ -30,13 +30,19 @@
                $(this).addClass('Highlight');
             });
             $('#MyDiv').mouseenter(function(){
-               $(this).toggleClass('Highlight');
+              Toggle(this);
+               $(this).css('cursor','pointer')
             })
             .mouseleave(function(){
-               $(this).toggleClass('Highlight');
-               $(this).css('cursor','pointer')
-
+              Toggle($(this))
             })
+            .mouseup(function(e){
+               alert($(e.target).attr('id'))
+               $(this).text('x: '+e.pageX+ 'y: '+e.pageY);
+            });
+            function Toggle(div){
+               $(div).toggleClass('Highlight')
+            }
           }
       </script>
   </head>
