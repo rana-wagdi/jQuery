@@ -5,6 +5,7 @@
       <style type="text/css">
           .BlueDiv { background-color: Navy; color:White;width:200px;}
           .RedDiv { background-color: Red; color:White; width:200px;}
+          .Highlight {background-color: yellow;}
           .style1
           {
               width: 100%;
@@ -26,14 +27,23 @@
             //Handle select
             $('.MyInput').change(function(){
                alert($(this).val());
+               $(this).addClass('Highlight');
             });
+            $('#MyDiv').mouseenter(function(){
+               $(this).toggleClass('Highlight');
+            })
+            .mouseleave(function(){
+               $(this).toggleClass('Highlight');
+               $(this).css('cursor','pointer')
+
+            })
           }
       </script>
   </head>
   <body>
      <div id="OutputDiv"></div>
      <div id="TableContainerDiv" title="Contains Table">
-      <div id="TestDiv" title="Div Title asdf asdfsdf asdf">
+      <div id="TestDiv" title="Div Title asdf asdfsdf asdf" >
           This is my div text
       </div>
       <div title="Contains Table">
@@ -63,7 +73,7 @@
       <div class="BlueDiv">
           <span>Blue div</span>
       </div>
-      <span class="Foo">Span 1</span>
+      <span class="Foo" id="MyDiv">Span 1</span>
       <span class="Foo">Span 2</span>
 
       <span id="Span3" class="Foo">Span 3</span>
