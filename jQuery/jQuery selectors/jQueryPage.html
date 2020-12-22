@@ -23,6 +23,10 @@
 
                
             });
+            //Handle select
+            $('#StateSelect').change(function(){
+               alert($(this).val());
+            });
           }
       </script>
   </head>
@@ -91,7 +95,7 @@
               </tr>           
               <tr>
                   <td>
-                  <select id="sel">
+                  <select id="StateSelect">
                       <option value="AZ">AZ</option>
                       <option value="CA" selected="true">CA</option>
                   </select></td>
