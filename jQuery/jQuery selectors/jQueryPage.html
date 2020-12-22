@@ -41,6 +41,12 @@
               tcd.prepend('<br /><span style="background-color:blue">Prepended child 1 </span>');
               $('<br /><span style="background-color:blue">Appended child 2 </span>').appendTo(tcd);
               $('<span style="background-color:blue">Prepended child 2 </span>').prependTo(tcd);
+
+              //wrap
+              $('span.Foo').wrap('<div class="RedDiv ParentWrapper" />');
+              $('div.ParentWrapper').each(function(){
+                 alert($(this).html());
+              })
           });
       </script>
   </head>
@@ -77,6 +83,12 @@
       <div class="BlueDiv">
           <span>Blue div</span>
       </div>
+      <span class="Foo">Span 1</span>
+      <span class="Foo">Span 2</span>
+
+      <span id="Span3" class="Foo">Span 3</span>
+
+
       <br />
       <span class="BlueDiv">This is my blue span</span>
       <br />
