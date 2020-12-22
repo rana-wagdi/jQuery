@@ -34,11 +34,16 @@
                }
             ).css('font-size','14pt')
             .css('background-color','yellow');
+
+            //Modifying the DOM
+               $('#TableContainerDiv').append('<span style="background-color:green">Append child 1 </span>');
+               $('#TableContainerDiv').prepend('<span style="background-color:blue">Prepended child 1 </span>');
           });
       </script>
   </head>
   <body>
      <div id="OutputDiv"></div>
+     <div id="TableContainerDiv" title="Contains Table">
       <div id="TestDiv" title="Div Title asdf asdfsdf asdf">
           This is my div text
       </div>
@@ -64,6 +69,7 @@
             </tr>
           </table>
           <br />
+         </div>
       </div>
       <div class="BlueDiv">
           <span>Blue div</span>
