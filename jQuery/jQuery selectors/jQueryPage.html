@@ -36,8 +36,11 @@
             .css('background-color','yellow');
 
             //Modifying the DOM
-               $('#TableContainerDiv').append('<span style="background-color:green">Append child 1 </span>');
-               $('#TableContainerDiv').prepend('<span style="background-color:blue">Prepended child 1 </span>');
+            var tcd =$('#TableContainerDiv')
+              tcd.append('<span style="background-color:green">Append child 1 </span>');
+              tcd.prepend('<br /><span style="background-color:blue">Prepended child 1 </span>');
+              $('<br /><span style="background-color:blue">Appended child 2 </span>').appendTo(tcd);
+              $('<span style="background-color:blue">Prepended child 2 </span>').prependTo(tcd);
           });
       </script>
   </head>
