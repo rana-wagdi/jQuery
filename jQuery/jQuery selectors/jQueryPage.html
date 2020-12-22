@@ -46,7 +46,10 @@
               $('span.Foo').wrap('<div class="RedDiv ParentWrapper" />');
               $('div.ParentWrapper').each(function(){
                  alert($(this).html());
-              })
+              });
+
+              //Remove
+              $('div.ParentWrapper').remove();
           });
       </script>
   </head>
