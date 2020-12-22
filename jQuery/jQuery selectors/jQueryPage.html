@@ -25,7 +25,14 @@
                //raw DOM object
                this.title ="Some title";
                $(this).attr('title','Some Title 2');
-            })
+            });
+
+            $('div.BlueDiv,div.RedDiv').attr(
+               {
+                  title:'some title3',
+                  style:'font-size:14pt;background-color:yellow;'
+               }
+            )
           });
       </script>
   </head>
