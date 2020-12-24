@@ -1,0 +1,9 @@
+<script type="text/javascript">
+    alert("Outside the jQuery ready");
+    $(function() {
+        alert("Inside the jQuery ready");
+    });
+ </script>
+This works for me in Safari 4.
+
+Update: Added DOCTYPE and html namespace to match the code on my test environment. Tested with Firefox 3.6.13 and example code works.
