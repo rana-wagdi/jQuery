@@ -8,7 +8,12 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $("#myButton").click(function() {
-                    $("#myDiv").load("HelpDetails.html #SubTOC");
+                    $("#myDiv").load("Not Found.html",
+                    function(response,status,xhr){
+                        if (status=="error"){
+                            alert ('Error: '+xhr.statusText);
+                        }
+                    });
                 });
              });
          </script>
