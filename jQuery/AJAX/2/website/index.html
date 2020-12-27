@@ -8,18 +8,15 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $("#myButton").click(function() {
-                    $("#myDiv").load("Not Found.html",
-                    function(response,status,xhr){
-                        if (status=="error"){
-                            alert ('Error: '+xhr.statusText);
-                        }
-                    });
+                    $.get('HelpDetails.html',function(data){
+                        $('#OutputDiv').html(data);
+                    })
                 });
              });
          </script>
     </head>
     <body>
         <button id="myButton">Click to get HTML</button>
-        <div id="myDiv"></div>
+        <div id="OutputDiv"></div>
     </body>
 </html>
